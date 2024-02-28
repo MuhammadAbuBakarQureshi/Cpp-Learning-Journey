@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void fib(int n){
+void fibonacci(int n){
 
     int n1 = 0, n2 = 1, nextTerm;
 
@@ -26,7 +26,7 @@ int main(){
 
     cin>>n;
 
-    fib(n);
+    fibonacci(n);
 
     return 0;
 }
