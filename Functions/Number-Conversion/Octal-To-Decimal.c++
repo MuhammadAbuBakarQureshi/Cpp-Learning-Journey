@@ -1,20 +1,21 @@
 #include <iostream>
+
 #include <math.h>
 
 using namespace std;
 
-int binaryToDecimal(int n)
-{
-
-    int sum = 0;
+int octalToDecimal(int n){
 
     int i = 0;
 
+    int sum = 0;
+
     while (n > 0)
     {
+
         int lastDigit = n % 10;
 
-        int calculation = lastDigit * pow(2, i);
+        int calculation = lastDigit * pow(8, i);
 
         sum += calculation;
 
@@ -26,16 +27,18 @@ int binaryToDecimal(int n)
     return sum;
 }
 
+
+
 int main()
 {
 
     int n;
 
-    cout << "Input Binary Number : ";
+    cout << "Enter Octal Number : ";
 
     cin >> n;
 
-    cout << binaryToDecimal(n) <<endl;
+    cout << octalToDecimal(n);
 
     return 0;
 }
