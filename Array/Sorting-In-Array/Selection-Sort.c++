@@ -13,7 +13,7 @@ int main()
 
     int array[n];
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) // This Loop use to store values in array
     {
 
         cout << endl;
@@ -25,7 +25,7 @@ int main()
 
     cout << "Input  : ";
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) // This Loop use to print array before sorting
     {
 
         cout << array[i] << " ";
@@ -33,7 +33,7 @@ int main()
 
     cout << endl;
 
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) // This loop use to sort array
     {
         for (int j = i + 1; j < n; j++)
         {
@@ -50,7 +50,7 @@ int main()
 
     cout << "Output : ";
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) // This loop use to print array after sorting
     {
 
         cout << array[i] << " ";
