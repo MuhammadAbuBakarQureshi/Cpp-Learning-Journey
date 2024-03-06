@@ -4,32 +4,22 @@ using namespace std;
 
 // Function to check the Maximum number
 
-int maxNo(int a, int b){
+int maxNo(int a, int b)
+{
 
-    if (a > b){
-
-        return a;
-    }else{
-
-        return b;
-    }
+    return a > b ? a : b;
 }
-
 
 // Function to check the Minimum number
 
-int minNo(int a, int b){
+int minNo(int a, int b)
+{
 
-    if (a < b){
-
-        return a;
-    }else{
-
-        return b;
-    }
+    return a < b ? a : b;
 }
 
-int main(){
+int main()
+{
 
     // Input from user store in integer "n"
     // "n" tells the size of array
@@ -44,7 +34,8 @@ int main(){
 
     // We run this for loop to store values in array
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
 
         cout << endl;
 
@@ -59,7 +50,8 @@ int main(){
 
     // we run this loop to get MAX and MIN value from the array
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
 
         max = maxNo(max, array[i]);
 
