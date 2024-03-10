@@ -47,6 +47,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
+        cout << endl;
+
         cout << "Input The Value Of " << i << " Index : ";
 
         cin >> arr[i];
