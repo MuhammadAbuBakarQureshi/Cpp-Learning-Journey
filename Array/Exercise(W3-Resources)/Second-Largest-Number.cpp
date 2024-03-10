@@ -7,22 +7,31 @@ void secondLargest(int arrSize, int arr[])
 
     int first = 0, second = 0;
 
-    for (int i = 0; i < arrSize; i++)
+    if (arrSize < 2)
     {
-        if (arr[i] > first)
-        {
 
-            second = first;
-            first = arr[i];
-        }
-        else if (arr[i] > second)
-        {
-
-            second = arr[i];
-        }
+        cout << "Array Is Too Short To Perform This Task" << endl;
     }
+    else
+    {
 
-    cout << "Second Largest Number In The Array : " << second << endl;
+        for (int i = 0; i < arrSize; i++)
+        {
+            if (arr[i] > first)
+            {
+
+                second = first;
+                first = arr[i];
+            }
+            else if (arr[i] > second)
+            {
+
+                second = arr[i];
+            }
+        }
+
+        cout << "Second Largest Number In The Array : " << second << endl;
+    }
 }
 
 int main()
