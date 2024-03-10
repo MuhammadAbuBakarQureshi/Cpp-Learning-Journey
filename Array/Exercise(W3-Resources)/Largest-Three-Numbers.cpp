@@ -7,31 +7,40 @@ void threeLargest(int arrSize, int arr[])
 {
     int first = 0, second = 0, third = 0;
 
-    for (int i = 0; i < arrSize; i++)
+    if (arrSize < 4)
     {
-        if (arr[i] > first)
-        {
-            third = second;
-            second = first;
-            first = arr[i];
-        }
-        else if (arr[i] > second)
-        {
 
-            third = second;
-            second = arr[i];
-        }
-        else if (arr[i] > third)
-        {
-            third = arr[i];
-        }
+        cout << "Array Is Too Short To Perform This Task" << endl;
     }
+    else
+    {
 
-    cout << "First Largest Number In The Array : " << first << endl;
+        for (int i = 0; i < arrSize; i++)
+        {
+            if (arr[i] > first)
+            {
+                third = second;
+                second = first;
+                first = arr[i];
+            }
+            else if (arr[i] > second)
+            {
 
-    cout << "Second Largest Number In The Array : " << second << endl;
+                third = second;
+                second = arr[i];
+            }
+            else if (arr[i] > third)
+            {
+                third = arr[i];
+            }
+        }
 
-    cout << "Third Largest Number In The Array : " << third << endl;
+        cout << "First Largest Number In The Array : " << first << endl;
+
+        cout << "Second Largest Number In The Array : " << second << endl;
+
+        cout << "Third Largest Number In The Array : " << third << endl;
+    }
 }
 
 int main()
