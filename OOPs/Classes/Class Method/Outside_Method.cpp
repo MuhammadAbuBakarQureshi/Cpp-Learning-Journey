@@ -2,14 +2,14 @@
 
 using namespace std;
 
-class myClass
+class myClass // The class
 {
 
-    public:
-
-    void message();
+public:             // Access specifier
+    void message(); // Method / Function declaration
 };
 
+// Method / Function declaration outside the class
 void myClass::message()
 {
 
@@ -19,10 +19,9 @@ void myClass::message()
 int main()
 {
 
+    myClass myObj; // create an object of myClass
 
-    myClass myObj;
-
-    myObj.message();
+    myObj.message(); // Call Method / Function
 
     return 0;
 }
