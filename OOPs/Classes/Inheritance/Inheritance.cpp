@@ -6,26 +6,26 @@ int main()
 {
 
     // Base Class
-    class Engine
+    class Parent
     {
 
     public:
-        string power = "1500 HP";
+        string parentName = "Nazar";
     };
 
     // Derived Class
-    class car : public Engine
+    class child : public Parent
     {
 
     public:
-        string model = "Super Sport";
+        string childName = "Farooq";
     };
 
-    car myCar;
+    child myCar;
 
-    cout << "Car Power : " << myCar.power << endl; //power property is inherit from "Engine" class
+    cout << "Parent Name : " << myCar.parentName << endl; //parentName property is inherit from "Parent" class
 
-    cout << "Car Model : " << myCar.model << endl;
+    cout << "Child Name : " << myCar.childName << endl;
 
     return 0;
 }
