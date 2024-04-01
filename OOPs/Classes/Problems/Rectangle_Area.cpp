@@ -27,7 +27,7 @@ public:
 int main()
 {
 
-    int length, width;
+    float length, width;
 
     cout << "Enter length of the rectangle : ";
 
