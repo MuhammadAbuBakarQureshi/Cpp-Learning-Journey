@@ -11,16 +11,16 @@ int main()
 
     const int *ptrToConst = &value; // pointer to const
 
-    int *const constptr = &value; // constant pointer
+    int *const constptr = &value; // constant pointer ✔️
 
-    // *ptrToConst = 20;       Error : cannot modify const data
+    // *ptrToConst = 20;       ❌ : cannot modify const data
     *constptr = 20; 
 
     cout << *constptr << endl;
 
-    int newValue = 20;
+    int newValue = 20; //✔️
 
-    // constptr = &newValue; Error: cannot change the address of constant pointer
+    // constptr = &newValue; ❌: cannot change the address of constant pointer
 
     return 0;
 }
