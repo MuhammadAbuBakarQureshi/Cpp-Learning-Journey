@@ -7,51 +7,20 @@ class car
 {
 
 public:
-    // Destructor
-
-    ~car()
-    {
-
-        cout << "I'm based class destructor" << endl;
-    }
-
-    // Constructor
-
-    car(string name, double price) : name(name), price(price) {}
-
-    // Members
 
     string name;
     double price;
 };
 
-class suv : public car
+class CarType
 {
 
 public:
-    // Destructor
-
-    ~suv()
-    {
-
-        cout << "I'm derived class destructor" << endl;
-    }
-
-    // Constructor
-
-    // If bass class has parameterized constructor the we pass the arguments from derived constructor
-
-    suv(string name, string type, double price) : car(name, price)
-    {
-
-        this->type = type;
-    }
 
     string type;
-
 };
 
-class company: public suv{
+class company: public CarType, public car{
 
 public:
 
@@ -59,9 +28,12 @@ public:
 
     // Constructor
 
-    company(string name, string type, string brand, double price): suv(name, type, price){
+    company(string name, string type, string brand, double price){
 
+        this->name = name;
+        this->type = type;
         this->brand = brand;
+        this->price = price;
     }
 
     void get_info()
