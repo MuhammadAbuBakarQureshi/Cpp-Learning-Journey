@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.c++": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "ostream": "cpp"
   }
 }
