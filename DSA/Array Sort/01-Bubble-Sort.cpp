@@ -13,7 +13,8 @@ int main()
 
     cout << "Before : ";
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
 
         cout << arr[i] << " ";
     }
@@ -23,24 +24,37 @@ int main()
     for (int i = 0; i < n; i++)
     {
 
+        // If the algorithm goes through the array one time without swapping any values, the array must be finished sorted, and we can 
+        //stop the algorithm
+
+        bool swaped = false;
+
         for (int j = 0; j < (n - 1 - i); j++)
         {
 
-            if (arr[j] > arr[j + 1]){
+            if (arr[j] > arr[j + 1])
+            {
 
                 int temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
+                swaped = true;
             }
+        }
+
+        if (!swaped)
+        {
+
+            break;
         }
     }
 
-
     // Printing output
 
-    cout << "\nAfter  : "; 
+    cout << "\nAfter  : ";
 
-    for(int i = 0; i < 5; i++){
+    for (int i = 0; i < 5; i++)
+    {
 
         cout << arr[i] << " ";
     }
