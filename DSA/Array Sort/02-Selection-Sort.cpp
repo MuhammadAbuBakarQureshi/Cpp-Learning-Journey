@@ -46,7 +46,7 @@ int main()
 
     for (int i = 0; i < size; i++)
     {
-        cout << "Enter the value of " << i << " min_index = ";
+        cout << "Enter the value of " << i << " Index = ";
 
         cin >> arr[i];
     }
